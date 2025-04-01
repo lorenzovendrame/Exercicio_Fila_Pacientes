@@ -50,6 +50,7 @@ public class Paciente {
     public String toString() {
         return "Número do Paciente: " + numeroPaciente + "\n" +
                "Número da Carteirinha: " + numeroCarteirinha + "\n" +
-               "Nome do Paciente: " + nomePaciente;
+               "Nome do Paciente: " + nomePaciente + "\n" +
+               "Prioridade: " + prioridade;
     }
 }

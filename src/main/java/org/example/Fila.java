@@ -16,9 +16,28 @@ public class Fila {
             inicio = novoNo;
             fim = novoNo;
         } else {
-            inicio.anterior = novoNo;
-            novoNo.proximo = inicio;
-            inicio = novoNo;
+            No tempNo = inicio;
+
+            while (tempNo.paciente.getPrioridade().getValor() < novoNo.paciente.getPrioridade().getValor()){
+                if (tempNo.proximo == null) {
+                    tempNo.proximo = novoNo;
+                    novoNo.anterior = tempNo;
+                    return;
+                }
+                tempNo = tempNo.proximo;
+            }
+
+            if (tempNo == inicio) {
+                novoNo.proximo = tempNo;
+                tempNo.anterior = novoNo;
+                inicio = novoNo;
+            } else {
+                novoNo.proximo = tempNo;
+                novoNo.anterior = tempNo.anterior;
+                tempNo.anterior = novoNo;
+                tempNo.anterior.proximo = novoNo;
+            }
+
         }
     }
 
@@ -30,6 +49,7 @@ public class Fila {
         if (fim == null) {
             System.out.println("Fila vazia");
         } else {
+            System.out.println("Atendendo o seguinte Paciente: \n" + fim.paciente.toString());
             if (fim.paciente == inicio.paciente) {
                 inicio = null;
             }
