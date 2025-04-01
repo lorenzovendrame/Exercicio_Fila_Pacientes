@@ -45,7 +45,7 @@ public class Main {
                                 System.out.println("Prioridade incorreta! Escolhendo a prioridade mínima");
                                 break;
                         }
-                    Paciente paciente = new Paciente(gp.numberoPedido, numeroCarteirinha, nomePaciente, prioridade);
+                    Paciente paciente = new Paciente(gp.numeroPedido, numeroCarteirinha, nomePaciente, prioridade);
                     gp.inserirPedidoFila(paciente);
                     break;
                 case 2:

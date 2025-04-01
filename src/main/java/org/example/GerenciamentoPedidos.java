@@ -2,15 +2,15 @@ package org.example;
 
 public class GerenciamentoPedidos {
     public Fila fila;
-    long numberoPedido;
+    long numeroPedido;
 
     public GerenciamentoPedidos(){
         fila = new Fila();
-        numberoPedido = 0;
+        numeroPedido = 0;
     }
 
     public void inserirPedidoFila(Paciente paciente){
-        paciente.setNumeroPaciente(++numberoPedido);
+        paciente.setNumeroPaciente(++numeroPedido);
         fila.inserirNoInicio(paciente);
     }
 
