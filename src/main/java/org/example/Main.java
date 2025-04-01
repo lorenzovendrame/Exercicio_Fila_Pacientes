@@ -9,7 +9,7 @@ public class Main {
 
             //Display do menu no console
             System.out.println("==============================");
-            System.out.println("|    SISTEMA DE REEMBOLSO    |");
+            System.out.println("|     SISTEMA DA CLÍNICA     |");
             System.out.println("==============================");
             System.out.println("| Opções :                   |");
             System.out.println("| 1. Adicionar Paciente      |");
