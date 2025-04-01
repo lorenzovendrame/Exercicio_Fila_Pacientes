@@ -22,6 +22,7 @@ public class Fila {
                 if (tempNo.proximo == null) {
                     tempNo.proximo = novoNo;
                     novoNo.anterior = tempNo;
+                    fim = novoNo;
                     return;
                 }
                 tempNo = tempNo.proximo;
